@@ -1,69 +1,217 @@
 <!DOCTYPE html>
-<html lang="en"> 
-<head> 
+<html lang="en">
+<head>
 	<meta charset="UTF-8" />
-	<title>Logan Caskey - Portfolio</title>
+	<title>Logan Caskey</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link 
+	<meta name="description" content="Logan Caskey — computer engineering at CU Boulder. Work at the boundary between hardware and software: embedded systems, control, FPGA, and analog design." />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+	<link
 		rel="stylesheet"
 		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 		integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
 		crossorigin="anonymous"
 	/>
-	<link rel="stylesheet" href="assets/css/style.css" />
+	<link rel="stylesheet" href="assets/css/style.css?v=2" />
 </head>
 <body>
-	<header>
-		<h1>Logan Caskey</h1>
-		<p>Aspiring Professional Geek</p>
-		<nav> 
-			<a href="index.html">Home</a>
-			<!-- <a href="about.html">About</a> -->
-			<a href="projects.html">Projects</a>
-			<a href="contact.html">Contact</a>
-			<a href="assets/resume.pdf" download class="resume-btn">
-				<i class="fas fa-file-download"></i> Resume
-			</a>
+	<header class="site-header">
+		<a class="brand" href="index.html">Logan Caskey</a>
+		<nav class="site-nav">
+			<a href="#about">About</a>
+			<a href="#experience">Experience</a>
+			<a href="#projects">Projects</a>
+			<a href="assets/pdf/resume.pdf">Résumé</a>
 		</nav>
+		<div class="socials">
+			<a href="https://github.com/caskeyvl" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+			<a href="https://www.linkedin.com/in/logan-caskey-974b48259" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+			<a href="mailto:caskeyvl@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+		</div>
 	</header>
 
-	<main> 
-		<section>
-			<h2>Welcome to my site</h2> 
-			<h3> About Me </h3>
-			<p>
-				Hi, my name is Logan Caskey. Thanks for visiting my portfolio website!
-			</p>
-			<p>
-				I love to learn about new things, especially technology. I always was amazed at how people managed to figure out how to manipulate our surroundings to such an extreme degree that things like computers can even exist. This curiosity is what drove me to pursuing computer engineering, and 
-			</p>
+	<main>
+		<section class="hero">
+			<div class="hero-text">
+				<h1>Logan Caskey</h1>
+				<p class="lede">
+					Computer engineering student at CU&nbsp;Boulder. I work at the boundary
+					between hardware and software &mdash; embedded systems, control, FPGA logic,
+					and the analog circuits underneath.
+				</p>
+				<p class="now">
+					<span>Currently</span> building a Game Boy with expanded functionality from scratch on an FPGA, later to be redesigned on a custom PCB with a custom case.
+				</p>
+			</div>
+
+			<!-- Op-amp integrator: input resistor, feedback capacitor, output. -->
+			<svg class="hero-figure" width="300" height="217" viewBox="0 0 360 260" fill="none" role="img" aria-label="Schematic of an op-amp integrator circuit">
+				<g class="wire" fill="none" stroke="#6f6a5e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+					<line x1="20" y1="96" x2="70" y2="96" />
+					<rect x="70" y="88" width="46" height="16" />
+					<line x1="116" y1="96" x2="196" y2="96" />
+					<line x1="196" y1="150" x2="224" y2="150" />
+					<line x1="224" y1="150" x2="224" y2="166" />
+					<path d="M196 68 L196 178 L286 123 Z" />
+					<line x1="286" y1="123" x2="340" y2="123" />
+					<line x1="316" y1="123" x2="316" y2="46" />
+					<line x1="316" y1="46" x2="150" y2="46" />
+					<line x1="150" y1="46" x2="150" y2="96" />
+					<line x1="214" y1="166" x2="234" y2="166" />
+					<line x1="218" y1="171" x2="230" y2="171" />
+					<line x1="221" y1="176" x2="227" y2="176" />
+				</g>
+				<g class="node" fill="#6f6a5e" stroke="none">
+					<circle cx="150" cy="96" r="3" />
+					<circle cx="316" cy="123" r="3" />
+				</g>
+				<g class="cap" fill="none" stroke="#e8a13c" stroke-width="1.5" stroke-linecap="round">
+					<line x1="224" y1="38" x2="224" y2="54" />
+					<line x1="234" y1="38" x2="234" y2="54" />
+				</g>
+				<text class="glyph" x="226" y="112">&#8747;</text>
+				<text class="lbl" x="14" y="86">V<tspan dy="3" font-size="9">in</tspan></text>
+				<text class="lbl" x="344" y="127">V<tspan dy="3" font-size="9">out</tspan></text>
+				<text class="lbl" x="202" y="90">&#8722;</text>
+				<text class="lbl" x="203" y="153">+</text>
+			</svg>
 		</section>
 
-		<section>
-			<h2>Featured Projects</h2>
-			<ul>
-				<li><strong>Prj1</strong> - description.</li>
-				<li><strong>Prj2</strong> - description.</li>
-				<li><strong>Prj3</strong> - description.</li>
-			</ul>
+		<section id="about" class="section">
+			<h2>About</h2>
+			<div class="prose">
+				<p>
+					I&rsquo;ve always loved building things and figuring out how they work.
+					I&rsquo;m a computer engineering student at CU&nbsp;Boulder in my last
+					semester, graduating Fall&nbsp;2026. My interests run wide &mdash; sometimes
+					too wide &mdash; across control theory, embedded systems, AI, homelabbing,
+					networking and network security, and computer architecture. I most enjoy
+					working at the boundary between hardware and software; I think it&rsquo;s the
+					most interesting abstraction in the whole stack that makes a computer work.
+				</p>
+				<p>
+					In my spare time I ski and snowboard, climb, hike, play video games, and
+					read.
+				</p>
+			</div>
+		</section>
+
+		<section id="experience" class="section">
+			<h2>Experience</h2>
+
+			<article class="entry">
+				<p class="entry-date">Aug 2025 &ndash; May 2026</p>
+				<div class="entry-body">
+					<h3>Team Lead / System Architect</h3>
+					<p class="entry-org">Senior Design, CU Boulder</p>
+					<p>
+						Worked under a mix of managerial and technical titles &mdash; Team Lead,
+						Customer Relations, System Architect, PCB Designer/Assembler, and Software
+						Manager &mdash; managing a team of five. We built a modular analog computer
+						that will sit at the core of an upcoming CU&nbsp;Boulder course. Alongside
+						it we built a demonstrator that holds a ping-pong ball at a target height
+						in a tube, driven by a control signal from the analog computer, to make
+						control theory tangible for students.
+					</p>
+					<p class="tags">
+						<span>Altium</span><span>Analog design</span><span>Qt / QML</span><span>Embedded Linux</span><span>Docker</span>
+					</p>
+				</div>
+			</article>
+
+			<article class="entry">
+				<p class="entry-date">Sep 2020 &ndash; Apr 2021</p>
+				<div class="entry-body">
+					<h3>Research Assistant</h3>
+					<p class="entry-org">EPA P3 Grant, Fort Lewis College</p>
+					<p>
+						Part of a multidisciplinary team developing a mobile PCR machine. Built
+						and maintained subsystems including a PID-controlled hot plate for on-site
+						bacterial culturing, and worked across the embedded stack in C++, Python,
+						and C# for both firmware and UI.
+					</p>
+					<p class="tags">
+						<span>PID control</span><span>C++</span><span>Python</span><span>C#</span>
+					</p>
+				</div>
+			</article>
+		</section>
+
+		<section id="projects" class="section">
+			<h2>Featured projects</h2>
+
+			<article class="project">
+				<div class="thumb" aria-hidden="true"></div>
+				<div class="project-body">
+					<h3>FPGA Game Boy <span class="status">In progress</span></h3>
+					<p>
+						A Game Boy built from scratch on an FPGA &mdash; SM83 CPU core and PPU in
+						SystemVerilog, working toward a custom FPGA-based PCB. The CPU core
+						currently runs instruction-test ROMs.
+					</p>
+					<p class="tags">
+						<span>SystemVerilog</span><span>FPGA</span><span>Computer architecture</span>
+					</p>
+				</div>
+			</article>
+
+			<article class="project">
+				<div class="thumb" aria-hidden="true"></div>
+				<div class="project-body">
+					<h3>Autonomous Robot Car</h3>
+					<p>
+						<!-- TODO Logan: correct to what you actually did -->
+						Characterized the drivetrain motors from measured data, built a model of
+						the platform, and closed the loop on position and heading control.
+					</p>
+					<p class="tags">
+						<span>Embedded C</span><span>Control systems</span><span>System identification</span>
+					</p>
+				</div>
+			</article>
+
+			<article class="project">
+				<div class="thumb" aria-hidden="true"></div>
+				<div class="project-body">
+					<h3>Adversarial Attack on Face Recognition</h3>
+					<p>
+						Adversarial perturbations that make a face-recognition model misidentify
+						one person as another, while the image looks unchanged to a human.
+						Partnered course project.
+					</p>
+					<p class="tags">
+						<span>PyTorch</span><span>Adversarial ML</span><span>Security</span>
+					</p>
+				</div>
+			</article>
+
+			<p class="more"><a href="archive.html">View the full project archive</a></p>
+		</section>
+
+		<section id="contact" class="section">
+			<h2>Contact</h2>
+			<div class="prose">
+				<p>The fastest way to reach me is email.</p>
+				<p class="contact-lines">
+					<a href="mailto:caskeyvl@gmail.com">caskeyvl@gmail.com</a>
+					<a href="https://github.com/caskeyvl" target="_blank" rel="noopener noreferrer">github.com/caskeyvl</a>
+					<a href="https://www.linkedin.com/in/logan-caskey-974b48259" target="_blank" rel="noopener noreferrer">linkedin.com/in/logan-caskey</a>
+				</p>
+			</div>
 		</section>
 	</main>
 
-	<footer>
-		<div class="social-links">
-			<a href="https://github.com/caskeyvl" class="social-icon" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-				<i class="fab fa-github"></i>
-			</a>
-			<a href="https://www.linkedin.com/in/logan-caskey-974b48259" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-				<i class="fab fa-linkedin"></i>
-			</a>
-		</div>
-		<p>&copy; <span id="year"></span> Logan Caskey</p>
+	<footer class="site-footer">
+		<span>&copy; <span id="year"></span> Logan Caskey</span>
+		<a href="https://github.com/caskeyvl/caskeyvl.github.io" target="_blank" rel="noopener noreferrer">Source</a>
 	</footer>
 
 	<script>
-		document.getElementById('year').textContext = new Date().getFullYear();
+		document.getElementById('year').textContent = new Date().getFullYear();
 	</script>
 </body>
 </html>
-
